@@ -22,6 +22,7 @@ def index(request):
         'judul': 'Resky\'s First Django',
         'contributor': 'Mario Ucup',
         'creator': 'reskyramadhandi',
+        'banner': 'blog/img/banner_blog.png',
         'nav': nav,
         'blogNav': blogNav,
     }

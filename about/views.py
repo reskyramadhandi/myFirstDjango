@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 nav = [
@@ -7,6 +6,7 @@ nav = [
     ['/about', 'About'],
     ['/contact', 'Contact'],
 ]
+# Create your views here.
 
 
 def index(request):
@@ -14,15 +14,7 @@ def index(request):
         'app': 'About',
         'judul': 'Resky\'s First Django',
         'creator': 'reskyramadhandi',
-        'banner': 'img/banner_home.png',
+        'banner': 'about/img/banner_about.png',
         'nav': nav,
     }
-    return render(request, 'index.html', context)
-
-
-def oldindex(request):
-    return HttpResponse("<h1> Halo Dunia </h1>")
-
-
-def oldabout(request):
-    return HttpResponse("Ini About")
+    return render(request, 'about/index.html', context)
