@@ -3,7 +3,12 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'app': 'Home',
+        'judul': 'Resky\'s First Django',
+        'creator': 'reskyramadhandi',
+    }
+    return render(request, 'index.html', context)
 
 
 def about(request):

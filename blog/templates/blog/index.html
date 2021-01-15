@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Resky's First Django</title>
+    <title>{{ page }} | {{ app }} | {{ judul }}</title>
 </head>
 <body>
-    <h1>Resky's First Django</h1>
-    <h2>Blog Index Page</h2>
+    <h1>{{ judul }}</h1>
+    <h2>{{ app }} {{ page }} Page</h2>
     <p>Website ini dibuat dengan menggunakan DJANGO!</p>
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/blog/recent">Recent</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <ul>
+            <li><a href="/blog/recent">Recent</a></li>
+            <li><a href="/blog/news">News</a></li>
+            <li><a href="/blog/cerita">Cerita</a></li>
+        </ul>
     </ul>
+    <p>Contributor: {{ contributor }}</p>
+    <p>Made by: <a href="https://reskyramadhandi.github.io" target="_blank">{{ creator }}</a></p>
 </body>
 </html>
