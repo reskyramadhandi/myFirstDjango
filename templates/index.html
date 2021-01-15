@@ -9,8 +9,12 @@
     <h1>{{judul}}</h1>
     <p>Website ini dibuat dengan menggunakan DJANGO!</p>
     <ul>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About</a></li>
+        {# template tags #}
+        {% for link, name in nav %}
+            <li>
+                <a href="{{ link }}"> {{name}} </a>
+            </li>
+        {% endfor %}
     </ul>
     <p>made by: <a href="https://reskyramadhandi.github.io" target="_blank">{{creator}}</a></p>
 </body>

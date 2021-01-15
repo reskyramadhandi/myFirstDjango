@@ -7,6 +7,12 @@ def index(request):
         'app': 'Home',
         'judul': 'Resky\'s First Django',
         'creator': 'reskyramadhandi',
+        'nav': [
+            ['/', 'Home'],
+            ['/blog', 'Blog'],
+            ['/about', 'About'],
+            ['/contact', 'Contact'],
+        ],
     }
     return render(request, 'index.html', context)
 
